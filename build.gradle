@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-web', version: '5.7.1.RELEASE'
+    implementation 'com.github.leobrennan0:Assignment1:v6'
+
+    compile 'joda-time:joda-time:2.11.2'
+}
+
+test {
+    useJUnitPlatform()
+}
